@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    transition: all .3s linear;
+}
+
+:root {
+    --blue: #084250;
+    --white: #FFF;
+    --black: #454545;
+    --blue-text: #52b4c9;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--blue);
+    max-height: 100vh;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('../img/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+section {
+    z-index: 200;
+}
+
+.header {
+    z-index: 1;
+    max-width: 1080px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.header .navbar {
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar h2 {
+    color: var(--white);
+    font-size: 1.4rem;
+}
+
+.header .navbar .logo i {
+    font-size: 4rem;
+    color: var(--blue);
+}
+
+.header .navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header .navbar ul li {
+    padding-block: .5rem;
+    padding-inline: 1rem;
+}
+
+.header .navbar ul li a {
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.header .navbar .clickables {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.header .navbar .clickables .globe {
+    padding-block: .5rem;
+    padding-inline: 1rem;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    background-color: var(--blue);
+    padding-inline: 2rem;
+    padding-block: .6rem;
+    color: var(--white);
+    font-size: .8rem;
+    border-radius: 5rem;
+}
+
+.btn i {
+    padding: .3rem;
+    border: .1rem solid var(--white);
+    border-radius: 50%;
+}
+
+.sign {
+    color: var(--white);
+    font-size: 1.4rem;
+}
+
+.search-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.search-info .title {
+    padding: 2rem;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.search-info .list-search {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    background-color: var(--white);
+    border-radius: 4rem;
+    padding: .4rem 3rem;
+    position: relative;
+}
+
+.search-info .list-search .box {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-info .list-search .box li,
+.search-info .list-search .box span {
+    color: var(--blue-text);
+}
+
+.search-info .list-search .box li i {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.space {
+    margin-right: 9rem
+}
+
+.button-container {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    bottom: 0;
+    background-color: var(--blue);
+    padding: .4rem 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 3rem;
+}
+
+.button-container a {
+    color: var(--white);
+}
+
+main {
+    max-width: 1080px;
+    margin: 10rem auto;
+}
+
+.travel-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.travel-info .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.travel-info .top .place {
+    padding-inline: 1rem;
+    padding-block: .5rem;
+}
+
+.travel-info .top .map {
+    border: 1px solid var(--white);
+    border-radius: 3rem;
+    cursor: pointer;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    font-size: 1.2rem;
+}
+
+.body-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 3rem;
+}
+
+.grid {
+    display: grid;
+    width: 114em;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: start;
+}
+
+.grid-item {
+    background-color: var(--white);
+    border-radius: .8rem;
+    overflow: hidden;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.card-image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: 10rem;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-header {
+    font-size: 2rem;
+    color: var(--blue);
+    font-weight: 700;
+    margin-bottom: 1.3rem;
+}
+
+.card-content .box {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.card-content .box .box-item {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.card-content .box .box-item li {
+    font-size: 1.1rem;
+    color: var(--blue-text);
+}
+
+.card-content .box .box-item>p {
+    font-weight: 700;
+}
+
+.places-target {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    color: var(--white);
+}
+
+.places-target {
+    display: flex;
+    flex-direction: column;
+}
+
+.places-target .top {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.places-target .top .map {
+    border: 1px solid var(--white);
+    border-radius: 3rem;
+    cursor: pointer;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    font-size: 1.2rem;
+}
+
+.country {
+    display: grid;
+    align-items: flex-start;
+    justify-content: center;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.box-country {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.box-country .image {
+    width: 12rem;
+    height: 12rem;
+}
+
+.box-country .image img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.box-country .box-content {
+    margin-left: 2rem;
+}
+
+@media only screen and (max-width:768px) {
+    .header .navbar ul {
+        display: none;
+    }
+    .search-info .list-search {
+        display: none;
+    }
+    .travel-info .top,
+    .places-target .top {
+        margin-inline: 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .btn {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .btn i {
+        display: none;
+    }
+    .header .navbar .clickables {
+        display: none;
+    }
+}
